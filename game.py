@@ -6,7 +6,7 @@ class Game:
         self.ready = False
         self.id = id
         self.winner = 0
-        self.ties = 0
+        self.messages = []
         self.board = [['' for _ in range(self.BOARD_COLS)] for _ in range(self.BOARD_ROWS)]
 
     def get_player_move(self, p):
@@ -60,5 +60,5 @@ class Game:
         self.playerTurn = 0
         self.ready = True
         self.winner = 0
-        self.ties = 0
+        self.messages = []
         self.board = [['' for _ in range(self.BOARD_COLS)] for _ in range(self.BOARD_ROWS)]

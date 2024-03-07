@@ -50,7 +50,6 @@ def threaded_client(conn, p, gameId):
                     conn.sendall(pickle.dumps(game))
                 elif isinstance(received_object, Game):
                     games[gameId] = received_object
-                    print("Player turn: ",player[games[gameId].playerTurn])
                     conn.sendall(pickle.dumps(received_object))
 
         except:
