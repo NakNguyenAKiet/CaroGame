@@ -2,7 +2,6 @@ import socket
 from _thread import *
 import pickle
 from game import Game
-from message import Message
 import struct
 
 server = "192.168.1.7"
