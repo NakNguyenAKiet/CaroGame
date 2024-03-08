@@ -2,6 +2,7 @@ import pygame
 import pickle
 from network import Network
 from game import Game
+from button import Button
 import sys
 
 pygame.font.init()
@@ -106,7 +107,9 @@ def display_message(message):
     pygame.display.update()
     pygame.time.delay(2000)
 
-def main():
+# chơi online
+def PlayOnline():
+    win = pygame.display.set_mode((width + ChatPanel, height))
     run = True
     clock = pygame.time.Clock()
     n = Network()
@@ -178,29 +181,78 @@ def main():
             redrawWindow(win, game, player)
             display_message(players[game.winner] + " wins!") 
             game = n.send("reset")
-
         redrawWindow(win, game, player)
 
-# def menu_win():
-#     run = True
-#     clock = pygame.time.Clock()
+def bot_play():
+    global game
+    for row in range(0, 3):
+        for col in range(0, 3):
+            if game.board[row][col] == '':
+                game.board[row][col] = 'O'
+                return
 
-#     while run:
-#         clock.tick(60)
-#         win.fill((128, 128, 128))
-#         font = pygame.font.SysFont("comicsans", 60)
-#         text = font.render("Click to Play!", 1, (255,0,0))
-#         win.blit(text, (100,200))
-#         pygame.display.update()
+# chơi với máy
+def PlayWithBot():
+    run = True
+    win.fill(WHITE)
+    draw_board()
+    # Khởi tạo bảng cờ
+    global game
+    game.resetGame()
+    player = 'X'
+    draw_board()
+    while run:
+        for event in pygame.event.get():
+            if event.type == pygame.QUIT:
+                run = False
+                pygame.quit()
 
-#         for event in pygame.event.get():
-#             if event.type == pygame.QUIT:
-#                 pygame.quit()
-#                 run = False
-#             if event.type == pygame.MOUSEBUTTONDOWN:
-#                 run = False
+            if event.type == pygame.MOUSEBUTTONDOWN:
+                mouseX = event.pos[0] // SQUARE_SIZE
+                mouseY = event.pos[1] // SQUARE_SIZE
 
-main()
+                if game.board[mouseY][mouseX] == '':
+                    game.board[mouseY][mouseX] = player
+                    draw_figures(game.board)
+                    pygame.display.update()
+                    if game.check_win():
+                        display_message(players[game.winner] + " wins!")
+                        run = False
+                    else:
+                        bot_play()
+                        draw_figures(game.board)
+                        pygame.display.update()
+                        if game.check_win():
+                            display_message(players[game.winner] + " wins!")
+                            run = False
 
-# while True:
-#     menu_win()
+        pygame.display.update()
+
+btns = [Button("Play Online", WIDTH//2-150, 100, (0,0,0)), Button("Play width bot", WIDTH//2-150, 400, (255,0,0))]
+def menu_win():
+    win = pygame.display.set_mode((width, height))
+    run = True
+    clock = pygame.time.Clock()
+    
+    while run:
+        clock.tick(60)
+        win.fill((128, 128, 128))
+        for btn in btns:
+            btn.draw(win)
+        pygame.display.update()
+
+        for event in pygame.event.get():
+            if event.type == pygame.QUIT:
+                pygame.quit()
+                run = False
+            if event.type == pygame.MOUSEBUTTONDOWN:
+                pos = pygame.mouse.get_pos()
+                for btn in btns:
+                    if btn.click(pos):
+                        run = False
+                        if btn.text == "Play Online":
+                            PlayOnline()
+                        if btn.text == "Play with bot":
+                            PlayWithBot()
+while True:
+    menu_win()

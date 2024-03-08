@@ -9,13 +9,6 @@ class Game:
         self.messages = []
         self.board = [['' for _ in range(self.BOARD_COLS)] for _ in range(self.BOARD_ROWS)]
 
-    def get_player_move(self, p):
-        """
-        :param p: [0,1]
-        :return: Move
-        """
-        return self.moves[p]
-
     def connected(self):
         return self.ready
 
