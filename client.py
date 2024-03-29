@@ -228,7 +228,7 @@ def PlayWithBot():
 
         pygame.display.update()
 
-btns = [Button("Play Online", WIDTH//2-150, 100, (0,0,0)), Button("Play width bot", WIDTH//2-150, 400, (255,0,0))]
+btns = [Button("Play Online", WIDTH//2-150, 100, (0,0,0)), Button("Play with bot", WIDTH//2-150, 400, (255,0,0))]
 def menu_win():
     win = pygame.display.set_mode((width, height))
     run = True
