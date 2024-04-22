@@ -181,6 +181,10 @@ def PlayOnline():
             redrawWindow(win, game, player)
             display_message(players[game.winner] + " wins!") 
             game = n.send("reset")
+        elif game.checkTie():
+            redrawWindow(win, game, player)
+            display_message("Tie Game!") 
+            game = n.send("reset")
         redrawWindow(win, game, player)
 
 def bot_play():
@@ -225,7 +229,9 @@ def PlayWithBot():
                         if game.check_win():
                             display_message(players[game.winner] + " wins!")
                             run = False
-
+                        elif game.checkTie():
+                            display_message("Tie Game!") 
+                            run = False
         pygame.display.update()
 
 btns = [Button("Play Online", WIDTH//2-150, 100, (0,0,0)), Button("Play with bot", WIDTH//2-150, 400, (255,0,0))]

@@ -32,6 +32,16 @@ class Game:
 
         return False
     
+    def checkTie(self):
+        temp = 0
+        for row in range(self.BOARD_ROWS):
+            for col in range(self.BOARD_COLS):
+                if self.board[row][col] == 'X' or self.board[row][col] == 'O':
+                    temp += 1
+        if temp == 9:
+            return True
+        return False
+    
     def check_win(self):
         if self.check_player_win("X"):
             self.winner = 0
