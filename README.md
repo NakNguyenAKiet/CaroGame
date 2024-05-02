@@ -1,3 +1,7 @@
+**Trang giới thiệu game**
+
+https://naknguyenakiet.github.io/Nguon-Mo/
+
 **Hướng dẫn cài đặt game Caro**
 
 Cách 1: Tải từ GitHub
