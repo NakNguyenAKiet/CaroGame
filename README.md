@@ -2,20 +2,21 @@
 
 Cách 1: Tải từ GitHub
 
-![image](https://github.com/NakNguyenAKiet/CaroGame/assets/93853392/e864f9bb-1591-4e72-9221-3ec7d1f97846)
-
-
 Bước 1:
 Truy cập đường dẫn sau để đến file trên GitHub: https://github.com/NakNguyenAKiet/CaroGame.git
 
 Bước 2:
 Copy đường dẫn trên hoặc tham khảo hình dưới.
 
+![image](https://github.com/NakNguyenAKiet/CaroGame/assets/93853392/e864f9bb-1591-4e72-9221-3ec7d1f97846)
+
 Bước 3:
 Chọn thư mục mà bạn muốn đặt game vào.
 
 Bước 4: Trong thư mục đó bấm chuột phải, chọn open in Terminal.
+
 Bước 5: Trong Terminal bấm lệnh sau git init
+
 Bước 6: Tiếp theo bấm lệnh git clone và thêm đường dẫn
 
 Cách 2:
