@@ -19,9 +19,12 @@ Chọn thư mục mà bạn muốn đặt game vào.
 
 Bước 4: Trong thư mục đó bấm chuột phải, chọn open in Terminal.
 
-Bước 5: Trong Terminal bấm lệnh sau git init
+Bước 5: Trong Terminal nhập lệnh sau git init
 
-Bước 6: Tiếp theo bấm lệnh git clone và thêm đường dẫn
+Bước 6: Tiếp theo nhập lệnh git clone và thêm đường dẫn
+
+![image](https://github.com/NakNguyenAKiet/CaroGame/assets/93853392/f75b7aec-8993-4e14-acdf-26d62a9e3bbd)
+
 
 Cách 2:
 
@@ -35,6 +38,8 @@ Bước 3: Tải hoàn thành, giải nén.
 
 Do game có cơ chế chơi online nên chúng ta cần thay đổi một bài thông số trong
 game để có thể sử dụng hết tính năng của game.
+
+(Kết nối mạng LAN và client phải truy cập đến địa chỉ của server trong mạng LAN)
 
 - Vào Python và mở thư mục chứa game
   
