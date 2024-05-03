@@ -4,7 +4,7 @@ https://naknguyenakiet.github.io/Nguon-Mo/
 
 **Hướng dẫn cài đặt game Caro**
 
-Cách 1: Tải từ GitHub
+## Cách 1: Tải từ GitHub
 
 Bước 1:
 Truy cập đường dẫn sau để đến file trên GitHub: https://github.com/NakNguyenAKiet/CaroGame.git
@@ -26,7 +26,7 @@ Bước 6: Tiếp theo nhập lệnh git clone và thêm đường dẫn
 ![image](https://github.com/NakNguyenAKiet/CaroGame/assets/93853392/f75b7aec-8993-4e14-acdf-26d62a9e3bbd)
 
 
-Cách 2:
+## Cách 2: Tải file .zip
 
 Bước 1: Tương tự như trên
 
@@ -51,4 +51,4 @@ game để có thể sử dụng hết tính năng của game.
 
 - Chạy file client.py để chơi game
 
-## Python 3 | General Public License
+## Python 3.12 | General Public License
