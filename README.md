@@ -42,8 +42,8 @@ game để có thể sử dụng hết tính năng của game.
 
 - Copy địa chỉ IPv4 và thay đổi vào biến server ở file server.py và network.py
   
-- Để 2 thiết bị có thể chơi online được với nhau cần thay đổi địa chỉ server
-trên máy khách bằng địa chỉ server của máy chủ đang mở server và máy chủ
-sẽ là người chơi trước
+- Chạy file server.py để khởi động server
+
+- Chạy file client.py để chơi game
 
 ## Python 3 | General Public License
