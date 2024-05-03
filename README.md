@@ -45,3 +45,5 @@ game để có thể sử dụng hết tính năng của game.
 - Để 2 thiết bị có thể chơi online được với nhau cần thay đổi địa chỉ server
 trên máy khách bằng địa chỉ server của máy chủ đang mở server và máy chủ
 sẽ là người chơi trước
+
+## Python 3 | General Public License
